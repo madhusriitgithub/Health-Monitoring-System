@@ -9,7 +9,9 @@ The project can detect the abnormal conditions, issue an alarm to the patient an
 ## Main Components used in the project
 
 LM35 Temperature sensor
+
 AD8232 ECG Module
+
 Digital Heartrate sensor - BPM
 
 ## Note

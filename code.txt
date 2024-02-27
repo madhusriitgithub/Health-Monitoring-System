@@ -1,0 +1,19 @@
+int heartRatePin = A0; // Connect the heart rate sensor to analog pin A0 
+int tempPin = Al; /Connect the temperature sensor to analog pin Al1 void setup0{
+Serial.begin(9600); // Initialize serial communication 
+void loop() {
+  
+int heartRate = analogRead(heartRatePin); // Read heart rate and temperature values
+int temperature= analogRead(tempPin); // Convert analog readings to actual values 
+float heartRateValue = map(heartRate, 0, 1023, 60, 150); // Adjust the range based on your Sensor
+float tempValue = (temperature * 5.0/ 1024) * 100; // LM35 temperature conversion
+
+Serial.print("Heart Rate: "); //II Print values to the serial monitor
+Serialprint(heartRate Value); 
+Serial,print(" bpmir"); 
+Serialprint("Temperature: "); 
+Serial.print(tempValue); 
+Serial.printn(" oC");  //II Add any additional processing or data logging as needed
+
+delay(1000); // Adjust delay as needed
+}
